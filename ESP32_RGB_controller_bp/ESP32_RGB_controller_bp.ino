@@ -9,9 +9,9 @@ const char ssid[] = "Your wifi ssid";
 const char password[] = "your password";
 
 //  RGb led pins
-byte r_pin = 5;
-byte g_pin = 18;
-byte b_pin = 19;
+byte r_pin = 25;
+byte g_pin = 26;
+byte b_pin = 27;
 
 //  defining channels
 #define r_channel 0
@@ -27,16 +27,15 @@ WebServer server(80);
 
 void setup(){
 
-  //  attaching GPIOs
-  ledcAttachPin(r_pin , r_channel);
-  ledcAttachPin(g_pin , g_channel);
-  ledcAttachPin(b_pin , b_channel);
-
   //  setting frequency and resolution at channels
   ledcSetup(r_channel , frequency , resolution);
   ledcSetup(g_channel , frequency , resolution);
   ledcSetup(b_channel , frequency , resolution);
 
+  //  attaching GPIOs
+  ledcAttachPin(r_pin , r_channel);
+  ledcAttachPin(g_pin , g_channel);
+  ledcAttachPin(b_pin , b_channel);
 
   //   starting serial communication
   Serial.begin(115200);
@@ -55,12 +54,21 @@ void setup(){
   Serial.println(WiFi.localIP());
 
   //  Define APIs
+
+
+  
   
 
   //  Define API, if other APIs are not found
+
+
+  
   
 
   //  start the server
+
+
+  
 
   
   Serial.println("HTTP Server started");
@@ -68,8 +76,15 @@ void setup(){
 }
 
 void loop(){
+
+
+
+  
   
   //  to handle the client requests at APIs
+
+
+  
 
 }
 
