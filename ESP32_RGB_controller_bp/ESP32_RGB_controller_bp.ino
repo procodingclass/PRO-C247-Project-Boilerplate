@@ -108,7 +108,7 @@ String generate_html(){
          html += "</head>\n";
          html += "<body>\n";
          html += "<div style=\"padding-left: 50%; padding-top: 10%;\">\n";
-         html += "<h1>No color</h1>\n";
+         html += "<h1>COLOR GENERATOR</h1>\n";
          html += "</div>\n";
 
          html += "<div style=\"padding-left: 40%;\">\n";
